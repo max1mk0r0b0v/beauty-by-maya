@@ -76,7 +76,7 @@ export function LandingPage() {
           <div className="relative grid items-center gap-3 text-center sm:grid-cols-[1fr_auto_1fr] sm:gap-5">
             <a
               href={phoneHref}
-              className="justify-self-center text-sm font-semibold tracking-[0.08em] text-rose-50/72 transition hover:text-rose-50 sm:justify-self-start"
+              className="hidden justify-self-center text-sm font-semibold tracking-[0.08em] text-rose-50/72 transition hover:text-rose-50 sm:block sm:justify-self-start"
             >
               {siteConfig.phone}
             </a>
