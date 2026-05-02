@@ -286,10 +286,14 @@ export function LandingPage() {
             <ButtonLink href={whatsappLink} target="_blank" rel="noreferrer" className="mt-1 w-full">
               שלחי לי פרטים
             </ButtonLink>
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-rose-100/38">
-              <span>{siteConfig.phone}</span>
+            <div className="flex flex-col items-center gap-y-1 text-center text-xs text-rose-100/38 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-3 sm:gap-y-2">
               <span>{siteConfig.location}</span>
+              <span className="hidden sm:inline">|</span>
               <span>{siteConfig.hours}</span>
+              <span className="hidden sm:inline">|</span>
+              <a href={phoneHref} className="transition hover:text-rose-100/70">
+                {siteConfig.phone}
+              </a>
             </div>
           </form>
         </div>
