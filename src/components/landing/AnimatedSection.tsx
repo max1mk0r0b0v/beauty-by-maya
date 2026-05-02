@@ -43,6 +43,7 @@ export function AnimatedSection({
       return () => cancelAnimationFrame(frame);
     }
 
+    const isMobileViewport = window.matchMedia("(max-width: 640px)").matches;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -50,7 +51,9 @@ export function AnimatedSection({
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.18, rootMargin: "0px 0px -70px 0px" }
+      isMobileViewport
+        ? { threshold: 0.08, rootMargin: "0px 0px -24px 0px" }
+        : { threshold: 0.18, rootMargin: "0px 0px -70px 0px" }
     );
 
     observer.observe(node);

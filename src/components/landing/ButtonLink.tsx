@@ -26,12 +26,12 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const baseClass =
     variant === "ghost"
-      ? "group inline-flex items-center justify-center rounded-full px-2 py-2 text-sm font-semibold transition duration-300"
-      : "group inline-flex min-h-12 items-center justify-center rounded-sm px-8 py-3.5 text-sm font-bold tracking-wide transition duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-rose-300/30 sm:text-base";
+      ? "group inline-flex items-center justify-center rounded-full px-2 py-2 text-sm font-semibold transition duration-300 active:scale-[0.98]"
+      : "group inline-flex min-h-12 items-center justify-center rounded-sm px-8 py-3.5 text-sm font-bold tracking-wide transition duration-300 ease-out active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-rose-300/30 sm:text-base";
 
   return (
     <Link className={`${baseClass} ${variants[variant]} ${className}`} href={href} {...props}>
-      <span className="transition duration-300 group-hover:scale-[1.02]">{children}</span>
+      <span className="transition duration-300 group-hover:scale-[1.02] group-active:scale-[0.99]">{children}</span>
     </Link>
   );
 }

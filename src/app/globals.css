@@ -132,6 +132,9 @@ section[id],
 
 .cta-emblem-wrap {
   filter: drop-shadow(0 18px 46px rgba(255, 190, 203, 0.14));
+  transition:
+    filter 300ms ease,
+    transform 300ms ease;
 }
 
 .hero-copy {
@@ -257,6 +260,46 @@ section[id],
       url("/images/beauty-by-maya-background.png");
     background-position: center top;
     background-size: auto 100vh;
+  }
+
+  .hero-copy {
+    animation-name: hero-reveal-mobile;
+    animation-duration: 620ms;
+  }
+
+  .reveal-motion {
+    filter: none;
+    transform: translateY(16px) scale(0.995);
+    transition:
+      opacity 560ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+      transform 560ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .treatment-card:active,
+  .testimonial-card:active,
+  .cta-card:active,
+  .micro-card:active {
+    filter: brightness(1.04);
+    transform: scale(0.985);
+  }
+
+  .cta-emblem-wrap:active {
+    filter: drop-shadow(0 20px 54px rgba(255, 190, 203, 0.18));
+    transform: scale(0.985);
+  }
+}
+
+@keyframes hero-reveal-mobile {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
