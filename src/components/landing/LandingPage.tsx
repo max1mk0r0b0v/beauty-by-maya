@@ -96,12 +96,12 @@ export function LandingPage() {
           <p className="hero-copy hero-delay-1 text-[0.58rem] font-bold tracking-[0.44em] text-rose-50/62">
             טיפולי פנים פרימיום בהתאמה אישית
           </p>
-          <h1 className="beauty-display hero-copy hero-delay-2 mt-6 max-w-4xl text-balance text-[3.45rem] font-light leading-[0.95] tracking-[-0.07em] text-white sm:text-7xl lg:text-8xl">
-            את הגרסה
-            <span className="block bg-[linear-gradient(120deg,#fff9fa_0%,#ffd3dc_42%,#ff86a2_100%)] bg-clip-text font-semibold italic text-transparent drop-shadow-[0_0_26px_rgba(255,111,145,0.28)]">
+          <h1 className="beauty-display hero-headline hero-copy hero-delay-2 mt-6 max-w-4xl text-balance text-[3.45rem] font-light text-white sm:text-7xl lg:text-8xl">
+            <span className="hero-headline-line">את הגרסה</span>
+            <span className="hero-headline-accent block bg-[linear-gradient(120deg,#fff9fa_0%,#ffd3dc_42%,#ff86a2_100%)] bg-clip-text font-semibold italic text-transparent">
               הטובה ביותר
             </span>
-            שלך
+            <span className="hero-headline-line">שלך</span>
           </h1>
           <p className="hero-copy hero-delay-3 mx-auto mt-6 max-w-xl text-pretty text-sm leading-7 text-rose-50/78 sm:text-base sm:leading-8">
             טיפול פנים אישי, רגוע ומדויק ב־Beauty By Maya, לחוויית יופי יוקרתית
